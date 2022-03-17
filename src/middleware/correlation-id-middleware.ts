@@ -1,7 +1,7 @@
-import * as uuid from 'uuid'
-import * as HTTPContext from 'express-http-context'
+import * as uuid from 'uuid';
+import * as HTTPContext from 'express-http-context';
 
-import { NextFunction, Request, Response } from 'express'
+import { NextFunction, Request, Response } from 'express';
 
 /**
  * Correlation ID middleware component extracts an existing correlation ID, if it exists, from the incoming request, or
@@ -13,16 +13,16 @@ class CorrelationIdMiddleware {
    */
   public static getMiddleware() {
     return (req: Request, res: Response, next: NextFunction) => {
-      const correlationId: string = req.get('correlationId') ?? uuid.v4()
+      const correlationId: string = req.get('correlationId') ?? uuid.v4();
 
-      req.headers['correlationId'] = correlationId
-      res.set('correlationId', correlationId)
+      req.headers['correlationId'] = correlationId;
+      res.set('correlationId', correlationId);
 
-      HTTPContext.set('correlationId', correlationId)
+      HTTPContext.set('correlationId', correlationId);
 
-      next()
-    }
+      next();
+    };
   }
 }
 
-export { CorrelationIdMiddleware }
+export { CorrelationIdMiddleware };

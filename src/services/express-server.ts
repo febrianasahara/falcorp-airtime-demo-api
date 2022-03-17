@@ -1,22 +1,19 @@
-import * as http from 'http'
-import * as Logger from 'bunyan'
-import * as express from 'express'
-import { Server } from '../types/server'
-import { LoggerFactory } from '@febrianasahara/internal-logging-shared-lib'
+import * as http from 'http';
+import * as express from 'express';
+import { Server } from '../types/server';
+import dotenv from "dotenv"
 
-const PORT = process.env.PORT ?? '3677'
+dotenv.config()
+
+const PORT = process.env.PORT ?? '3677';
 /**
  * Express specific implementation of an HTTP server
  */
 class ExpressServer implements Server {
   /**
-   * Logger for debugging and info
-   */
-  private readonly logger: Logger
-  /**
    * The port that the server should run on
    */
-  private readonly port: string
+  private readonly port: string;
 
   /**
    * The HTTP server after initialization
@@ -25,14 +22,13 @@ class ExpressServer implements Server {
    * The HTTP server after initialization
    */
 
-  server!: http.Server
+  server!: http.Server;
 
   /**
    * @constructor
    */
-  constructor(protected app: express.Express, loggerFactory: LoggerFactory) {
-    this.logger = loggerFactory.getNamedLogger('express-server')
-    this.port = PORT
+  constructor(protected app: express.Express) {
+    this.port = PORT;
   }
 
   /**
@@ -44,24 +40,22 @@ class ExpressServer implements Server {
      */
     const isRunning = (): void => {
       if (this.server) {
-        this.logger.error('Server instance is already running')
-        throw new Error('Server instance already running')
+        console.error('Server instance is already running');
+        throw new Error('Server instance already running');
       }
-    }
+    };
 
     /**
      * Start the server
      */
     const startServer = (): void => {
       this.server = this.app.listen(this.port, () => {
-        this.logger.info(`Server available on port ${this.port}`)
-      })
-    }
+        console.info(`Server available on port ${this.port}`);
+      });
+    };
 
-    this.logger.info('Attempting to start server')
-    return Promise.resolve()
-      .then(isRunning)
-      .then(startServer)
+    console.info('Attempting to start server');
+    return Promise.resolve().then(isRunning).then(startServer);
   }
 
   /**
@@ -73,23 +67,22 @@ class ExpressServer implements Server {
      */
     const stopServer = () => {
       if (!this.server) {
-        return this.logger.info('Server stopped successfully')
+        return console.info('Server stopped successfully');
       }
 
-      this.server.close((error) => {
+      this.server.close(error => {
         if (error) {
-          this.logger.error('Error occurred while stopping the server', { message: error.message })
-          throw error
+          console.error('Error occurred while stopping the server', { message: error.message });
+          throw error;
         }
 
-        return this.logger.info('Server stopped successfully')
-      })
-    }
+        return console.info('Server stopped successfully');
+      });
+    };
 
-    this.logger.info('Attempting to stop server')
-    return Promise.resolve()
-      .then(stopServer)
+    console.info('Attempting to stop server');
+    return Promise.resolve().then(stopServer);
   }
 }
 
-export { ExpressServer }
+export { ExpressServer };
