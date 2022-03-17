@@ -1,0 +1,774 @@
+{
+  "data": {
+	"currentVersionNumber":1000,
+    "menuInfo": {
+      "id": 1,
+      "name": "AIRTIME",
+      "color": {
+        "main": "#2DCC57",
+        "titleBar": "#25BE4D",
+        "secondary": "#38DE55"
+      },
+      "currency": {
+        "symbol": "R",
+        "code": "ZAR",
+        "useSymbol": true
+      }
+    },
+    "purchaseTypeSection": {
+      "title": "Type",
+    "purchaseTypes": [
+      {
+        "id": 1,
+        "name": "Voucher",
+        "displayType": 1,
+        "completeOptions": [1, 2, 3, 4],
+        "doneActionId": 1
+      },
+      {
+        "id": 2,
+        "name": "Top Up",
+        "displayType": 1,
+        "completeOptions": [1, 2, 3, 4],
+        "doneActionId": 1
+      },
+      {
+        "id": 3,
+        "name": "eeziAirtime",
+        "iconName": "ic_eezi_airtime",
+        "displayType": 2,
+        "completeOptions": [1, 2, 3, 4],
+        "doneActionId": 1
+      },
+      {
+        "id": 4,
+        "name": "Global Airtime",
+        "displayType": 1,
+        "completeOptions": [3, 4],
+        "doneActionId": 2
+      }
+    ]},
+    "providerSection": {
+      "title": "Network",
+    "serviceProviders": [
+      {
+        "id": 1,
+        "name": "Vodacom",
+        "icon": {
+          "defaultIconName": "ic_provider_vodacom",
+          "selectedIconName": "ic_provider_vodacom_white"
+        },
+        "color": {
+          "selected": "#FF4C00"
+        },
+        "displayType": 2
+      },
+      {
+        "id": 2,
+        "name": "MTN",
+        "icon": {
+          "defaultIconName": "ic_provider_mtn",
+          "selectedIconName": "ic_provider_mtn_small"
+        },
+        "color": {
+          "selected": "#FFC100"
+        },
+        "displayType": 2,
+        "messages": [
+          "Dial <strong>*165*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "CellC",
+        "icon": {
+          "defaultIconName": "ic_provider_cell",
+          "selectedIconName": "ic_provider_cell_white"
+        },
+        "color": {
+          "selected": "#FF4C00"
+        },
+        "displayType": 2,
+        "messages": [
+          "Dial <strong>*999*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Telkom",
+        "icon": {
+          "defaultIconName": "ic_provider_telkom"
+        },
+        "displayType": 2,
+        "messages": [
+          "Dial <strong>*1880*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Virgin",
+        "icon": {
+          "defaultIconName": "ic_provider_virgin"
+        },
+        "displayType": 2,
+        "messages": [
+          "Dial <strong>*2333333333*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "WORLD CALL",
+        "icon": {
+          "defaultIconName": "ic_provider_world_call"
+        },
+        "displayType": 2,
+        "messages": [
+          "Dial <strong>*666666*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ]
+      }
+    ]},
+    "availableInputFields": [
+      {
+        "id": 1,
+        "name": "Cellphone Number",
+        "minDigitCount": 10,
+        "maxDigitCount": 10,
+        "description": "Input your cell phone number",
+        "inputType": 3
+      },
+      {
+        "id": 165721,
+        "name": "Recipient Number",
+        "minDigitCount": 10,
+        "maxDigitCount": 25,
+        "description": "Enter Cellphone Number",
+        "inputType": 13
+      },
+      {
+        "id": 165723,
+        "name": "Amount",
+        "inputType": 14
+      },
+      {
+        "id": 165724,
+        "name": "Sender Number",
+        "minDigitCount": 10,
+        "maxDigitCount": 10,
+        "description": "Enter Cellphone Number",
+        "inputType": 3
+      }
+    ],
+    "availableDoneActions": [
+      {
+        "id": 1,
+        "type":0,
+        "name": "Sell",
+        "appendAmount": false,
+        "completeScreenTitle": "SALE COMPLETE"
+      },
+      {
+        "id": 2,
+        "type":7,
+        "name": "Sell",
+        "appendAmount": false,
+        "completeScreenTitle": "SALE COMPLETE"
+      }
+    ],
+    "products": [
+      {
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 1,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 3127327,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 1102,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 1103,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 1104,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 1105,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 1106,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 1107,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 1108,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 1109,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 1199,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 2,
+        "extraFields": [ {"jsonFieldName": "destinationMSISDN", "inputFieldId":  1}],
+        "providerId": 1,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 2101,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 2102,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 2103,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 2104,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 2105,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 2106,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 2107,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 2108,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 2109,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 2199,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 2,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 3127327,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 1202,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 1203,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 1204,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 1205,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 1206,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 1207,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 1208,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 1209,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 1299,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 2,
+        "extraFields": [ {"jsonFieldName": "destinationMSISDN", "inputFieldId":  1}],
+        "providerId": 2,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 3127457,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 2202,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 2203,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 2204,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 2205,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 2206,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 2207,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 2208,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 2209,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 2299,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 3,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 1304,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 1305,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 1306,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 1307,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 1308,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 1309,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 1399,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 2,
+        "extraFields": [  {"jsonFieldName": "destinationMSISDN", "inputFieldId":  1}],
+        "providerId": 3,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 2301,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 2302,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 2303,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 2304,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 2305,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 2306,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 2307,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 2308,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 2309,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 2399,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "description": "Enter Own Amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 4,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 1401,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 1402,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 1403,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 1404,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 1405,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 1406,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 1407,
+            "amountInCents": 25000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 1499,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000
+        }}
+      },
+      {
+        "productId": 2211,
+        "purchaseTypeId": 2,
+        "extraFields": [ {"jsonFieldName": "destinationMSISDN", "inputFieldId":  1}],
+        "providerId": 4,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 2401,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 2402,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 2403,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 2404,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 2405,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 2406,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 2407,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 2408,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 2409,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 2499,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000
+        }}
+      },
+      {
+        "productId": 2201,
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 5,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 1501,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 1502,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 1503,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 1504,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 1505,
+            "amountInCents": 15000
+          },
+          {
+            "sku": 1506,
+            "amountInCents": 20000
+          },
+          {
+            "sku": 1507,
+            "amountInCents": 25000
+          },
+          {
+            "sku": 1508,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 1509,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 1599,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000
+        }}
+      },
+      {
+        "productId": 2001,
+        "purchaseTypeId": 2,
+        "extraFields": [  {"jsonFieldName": "destinationMSISDN", "inputFieldId":  1}],
+        "providerId": 5,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 2507,
+            "amountInCents": 25000,
+            "message": "Test message for fix amount"
+          },
+          {
+            "sku": 2508,
+            "amountInCents": 30000
+          },
+          {
+            "sku": 2509,
+            "amountInCents": 35000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 2599,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000,
+          "message": "Test message for custom amount"
+        }}
+      },
+      {
+        "purchaseTypeId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "providerId": 6,
+        "doneActionId": 1,
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 1601,
+            "amountInCents": 1000,
+            "isOffline": true
+          },
+          {
+            "sku": 1602,
+            "amountInCents": 2000,
+            "isPromo": true
+          }
+        ]}
+      },
+      {
+        "productId": 3001,
+        "purchaseTypeId": 3,
+        "doneActionId": 1,
+        "messages": [
+          "Dial <strong>*130*3621*3*</strong>",
+          "Followed by the PIN without any spaces",
+          "Followed by #"
+        ],
+        "preDefinedAmount": {
+        "fixedAmountItems": [
+          {
+            "sku": 3001,
+            "amountInCents": 200
+          },
+          {
+            "sku": 2985583,
+            "amountInCents": 500
+          },
+          {
+            "sku": 3003,
+            "amountInCents": 1000
+          },
+          {
+            "sku": 3004,
+            "amountInCents": 1200
+          },
+          {
+            "sku": 3005,
+            "amountInCents": 2000
+          },
+          {
+            "sku": 3006,
+            "amountInCents": 3000
+          },
+          {
+            "sku": 3007,
+            "amountInCents": 5000
+          },
+          {
+            "sku": 3008,
+            "amountInCents": 10000
+          },
+          {
+            "sku": 3009,
+            "amountInCents": 15000
+          }
+        ],
+        "customAmountItem": {
+          "sku": 3099,
+          "minAmountInCents": 100,
+          "maxAmountInCents": 100000
+        }}
+      },
+      {
+        "purchaseTypeId": 4,
+        "doneActionId": 2,
+        "extraFields": [
+          {
+            "inputFieldId": 165721,
+            "jsonFieldName": "destinationMsisdn",
+            "displayWhenComplete": true
+          },
+          {
+            "inputFieldId": 165723,
+            "jsonFieldName": "amount",
+            "preProcessorInputFieldId": 165721
+          },
+          {
+            "inputFieldId": 165724,
+            "jsonFieldName": "senderMsisdn"
+          }
+        ]
+      }
+    ]
+  }
+}
