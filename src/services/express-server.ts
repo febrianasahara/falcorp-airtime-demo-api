@@ -4,7 +4,6 @@ import { Server } from '../types/server';
 import dotenv from "dotenv"
 
 dotenv.config()
-
 const PORT = process.env.PORT ?? '3677';
 /**
  * Express specific implementation of an HTTP server
