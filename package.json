@@ -4,7 +4,7 @@
   "scripts": {
     "build": "tsc",
     "test": "mocha",
-    "start": "node ./build/index.js",
+    "start": "node ./build/app.js",
     "heroku-postbuild": "npm run build",
     "watch:dev": "nodemon -w src/index.ts",
     "coverage": "nyc --reporter=lcov mocha",
